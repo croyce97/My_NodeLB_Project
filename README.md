@@ -57,7 +57,11 @@ sudo systemctl enable nginx
 ```
 
 ### Step 6: Configure NGINX load balancing
-+ Create `/etc/nginx/conf.d/my_node_app.conf` on VM1 using the [nginx.conf](https://github.com/croyce97/My_NodeLB_Project/blob/main/nginx.conf) provided in this repository.
++ Create `sudo nano /etc/nginx/sites-available/my_node_app.conf
+` on VM1 using the [nginx.conf](https://github.com/croyce97/My_NodeLB_Project/blob/main/nginx.conf) provided in this repository.
+
++ `sudo ln -s /etc/nginx/sites-available/my_node_app /etc/nginx/sites-enabled/`
+
 
 
 ### Step 7: Log Backend IP (Upstream) in NGINX
