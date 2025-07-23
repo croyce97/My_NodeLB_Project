@@ -29,14 +29,14 @@ sudo systemctl start docker
 
 ###  Step 2: Clone the project
 `git clone https://github.com/croyce97/My_NodeLB_Project.git `
+
 `cd My_NodeLB_Project`
 
 ### Step 3: Build Docker image and Run the container
 VM2: 
-
++ `docker build -t my_node_app:v1 .`
 + `docker run -dp 3001:3000 my_node_app:v1`
   
-+ `docker build -t my_node_app:v1 .`
 
 VM3: 
 
@@ -57,7 +57,8 @@ sudo systemctl enable nginx
 ```
 
 ### Step 6: Configure NGINX load balancing
-+ Create `/etc/nginx/conf.d/my_node_app.conf` on VM1: https://github.com/croyce97/My_NodeLB_Project/blob/main/nginx.conf
++ Create `/etc/nginx/conf.d/my_node_app.conf` on VM1 using the [nginx.conf](https://github.com/croyce97/My_NodeLB_Project/blob/main/nginx.conf) provided in this repository.
+
 
 ### Step 7: Log Backend IP (Upstream) in NGINX
 * Open the main config file on VM1: `sudo vi /etc/nginx/nginx.conf `
