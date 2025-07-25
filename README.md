@@ -58,7 +58,7 @@ sudo systemctl enable nginx
 
 ### Step 6: Configure NGINX load balancing
 + Create `sudo nano /etc/nginx/sites-available/my_node_app.conf
-` on VM1 using the [nginx.conf](https://github.com/croyce97/My_NodeLB_Project/blob/main/my_node_app.conf) provided in this repository.
+` on VM1 using the [my_node_app.conf](https://github.com/croyce97/My_NodeLB_Project/blob/main/my_node_app.conf).
 
 + `sudo ln -s /etc/nginx/sites-available/my_node_app /etc/nginx/sites-enabled/`
 
